@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 using Db = Autodesk.AutoCAD.DatabaseServices;
 
 
-namespace Simple_G_Code
+namespace SimpleCAM
 {
     
         //const string podachaXY = " F1000"; //Скорость подачи для осей XY
@@ -20,17 +20,17 @@ namespace Simple_G_Code
         //const int round = 3;  // уровень jrheuktybz  
     
     
-    public class Settings
+    public class TempClass2
     {
         private Db.LineWeight _weight = Db.LineWeight.LineWeight009;
         private int _colorInd = 10;
         private string _layerName = "xline";
 
-        public Settings()
+        public TempClass2()
         {
         }
 
-        public Settings(int colorInd, Db.LineWeight weight, string layerName)
+        public TempClass2(int colorInd, Db.LineWeight weight, string layerName)
         {
             this.colorInd = colorInd;
             this.weight = weight;
@@ -58,7 +58,7 @@ namespace Simple_G_Code
 
 
 
-        public Settings getParam()
+        public TempClass2 getParam()
         {
 
             string path = Assembly.GetExecutingAssembly().Location;
@@ -66,40 +66,40 @@ namespace Simple_G_Code
             path = fi1.Directory.ToString() + "\\MySettings.xml";
             fi1 = null;
 
-            Settings myObject = default(Settings);
+            TempClass2 myObject = default(TempClass2);
             if (System.IO.File.Exists(path))
             {
                 try
                 {
-                    XmlSerializer mySerializer = new XmlSerializer(typeof(Settings));
+                    XmlSerializer mySerializer = new XmlSerializer(typeof(TempClass2));
                     using (FileStream myFileStream = new FileStream(path, FileMode.Open))
                     {
-                        myObject = (Settings)mySerializer.Deserialize(myFileStream);
+                        myObject = (TempClass2)mySerializer.Deserialize(myFileStream);
                     }
 
                 }
                 catch (System.InvalidOperationException ex)
                 {
                     System.IO.File.Delete(path);
-                    myObject = new Settings(256, Db.LineWeight.LineWeight009, "xline");
+                    myObject = new TempClass2(256, Db.LineWeight.LineWeight009, "xline");
                 }
 
             }
             else
             {
-                myObject = new Settings(256, Db.LineWeight.LineWeight009, "xline");
+                myObject = new TempClass2(256, Db.LineWeight.LineWeight009, "xline");
             }
             return myObject;
         }
 
-        public void saveParam(Settings Setting)
+        public void saveParam(TempClass2 Setting)
         {
             string path = Assembly.GetExecutingAssembly().Location;
             FileInfo fi1 = new FileInfo(path);
             path = fi1.Directory.ToString() + "\\MySettings.xml";
             fi1 = null;
 
-            XmlSerializer ser = new XmlSerializer(typeof(Settings));
+            XmlSerializer ser = new XmlSerializer(typeof(TempClass2));
             using (TextWriter writer = new StreamWriter(path, false))
             {
                 ser.Serialize(writer, Setting);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple_G-Code", "Simple_G-Code\Simple_G-Code.csproj", "{BDB247DA-9174-456A-A9BC-90B5575EF8AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCAM", "Simple_G-Code\SimpleCAM.csproj", "{BDB247DA-9174-456A-A9BC-90B5575EF8AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

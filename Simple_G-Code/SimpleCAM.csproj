@@ -7,8 +7,8 @@
     <ProjectGuid>{BDB247DA-9174-456A-A9BC-90B5575EF8AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Simple_G_Code</RootNamespace>
-    <AssemblyName>Simple_G-Code</AssemblyName>
+    <RootNamespace>SimpleCAM</RootNamespace>
+    <AssemblyName>SimpleCAM</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -53,9 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="TempClass1.cs" />
+    <Compile Include="CAM_Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="TempClass2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

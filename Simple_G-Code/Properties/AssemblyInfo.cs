@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Simple_G_Code")]
+[assembly: AssemblyTitle("SimpleCAM")]
 [assembly: AssemblyDescription("Простой генератор Gcode")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Shulzhitskiy")]
-[assembly: AssemblyProduct("Simple_G_Code")]
+[assembly: AssemblyProduct("SimpleCAM")]
 [assembly: AssemblyCopyright("Copyright © Shulzhitskiy 2014")]
 [assembly: AssemblyTrademark("Shulzhitskiy")]
 [assembly: AssemblyCulture("Ru-ru")]
